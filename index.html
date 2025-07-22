@@ -741,7 +741,7 @@
         
         <div class="contact-grid">
             <div class="contact-info">
-                <div class="contact-item onclick="window.location.href='mailto:syazwanakmal80@gmail.com'" style="cursor: pointer;">
+                <div class="contact-item" onclick="window.location.href='mailto:syazwanakmal80@gmail.com'" style="cursor: pointer;">
                     <div class="contact-icon">📧</div>
                     <div>
                         <h3>Email</h3>
@@ -750,13 +750,13 @@
                 </div>
                 
                 <a href="https://github.com/flerraa" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
-                <div class="contact-item" >
-                    <div class="contact-icon">💻</div>
-                    <div>
-                        <h3>GitHub</h3>
-                        <p>github.com/flerraa</p>
+                    <div class="contact-item">
+                        <div class="contact-icon">💻</div>
+                        <div>
+                            <h3>GitHub</h3>
+                            <p>github.com/flerraa</p>
+                        </div>
                     </div>
-                </div>
                 </a>
 
                 <div class="contact-item">
@@ -776,36 +776,35 @@
                 </div>
             </div>
 
-            
             <form class="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
-    <!-- Hidden input for Netlify form detection -->
-    <input type="hidden" name="form-name" value="contact" />
-    
-    <div class="form-group">
-        <input type="text" id="name" name="name" placeholder="Your Name" required>
-    </div>
-    <div class="form-group">
-        <input type="email" id="email" name="email" placeholder="Your Email" required>
-    </div>
-    <div class="form-group">
-        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-    </div>
-    
-    <!-- Netlify reCAPTCHA (optional but recommended) -->
-    <div data-netlify-recaptcha="true"></div>
-    
-    <button type="submit" class="btn btn-primary">Send Message</button>
-</form>
-           </div>
+                <!-- Hidden input for Netlify form detection -->
+                <input type="hidden" name="form-name" value="contact" />
+                
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                
+                <!-- Netlify reCAPTCHA -->
+                <div data-netlify-recaptcha="true"></div>
+                
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
 
-           <!-- Scroll Back -->
-           <div class="scroll-back">
-               <button onclick="scrollToTop()" class="scroll-back-btn">
-                   ↑ Back to Top
-               </button>
-           </div>
-       </div>
-   </section>
+        <!-- Scroll Back -->
+        <div class="scroll-back">
+            <button onclick="scrollToTop()" class="scroll-back-btn">
+                ↑ Back to Top
+            </button>
+        </div>
+    </div>
+</section>
 
    <!-- Loading GSAP -->
    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
