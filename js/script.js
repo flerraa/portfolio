@@ -269,29 +269,6 @@ function scrollToTop() {
     });
 }
 
-// Contact form handling
-document.getElementById('contactForm')?.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(this);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const message = formData.get('message');
-    
-    // Simple validation
-    if (!name || !email || !message) {
-        alert('Please fill in all fields');
-        return;
-    }
-    
-    // Here you would typically send the data to a server
-    // For now, we'll just show a success message
-    alert('Thank you for your message! I\'ll get back to you soon.');
-    
-    // Reset form
-    this.reset();
-});
 
 // Force show contact section on page load for testing
 document.addEventListener('DOMContentLoaded', function() {
