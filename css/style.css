@@ -683,6 +683,47 @@ svg.parallax {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* MOBILE LAYOUT FIXES - Reset contact section positioning on mobile */
+    #contact {
+        position: relative !important; /* Override fixed positioning */
+        z-index: 3 !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        top: auto !important;
+        left: auto !important;
+        width: auto !important;
+        height: auto !important;
+        background: transparent !important;
+    }
+    
+    /* Ensure proper spacing between sections */
+    #projects {
+        margin-bottom: 2rem;
+    }
+    
+    /* Contact section mobile styling */
+    #contact .content-wrapper {
+        background: rgba(0, 0, 0, 0.6) !important;
+        backdrop-filter: blur(15px) !important;
+        margin-top: 2rem;
+    }
+    
+    /* Contact grid mobile responsive */
+    .contact-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+    
+    /* Contact info mobile styling */
+    .contact-info {
+        margin-bottom: 2rem;
+    }
+    
+    /* Form styling on mobile */
+    .contact-form {
+        width: 100%;
+    }
+    
     .hero-title {
         font-size: 2.5rem;
     }
@@ -692,7 +733,9 @@ svg.parallax {
     }
     
     .hero-stats {
-        gap: 1.5rem;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 2rem;
     }
     
     .section-title {
@@ -714,19 +757,9 @@ svg.parallax {
         gap: 1.5rem;
     }
     
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
     .project-links {
         flex-direction: column;
         gap: 0.5rem;
-    }
-    
-    .hero-stats {
-        flex-direction: column;
-        gap: 1rem;
     }
     
     /* Mobile project card fixes */
@@ -745,23 +778,46 @@ svg.parallax {
     .project-description {
         font-size: 0.85rem;
     }
+    
+    /* CTA buttons mobile spacing */
+    .cta-button {
+        margin: 0.5rem;
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
+    /* Section padding adjustment */
     .section {
-        padding: 1rem;
+        padding: 1rem 0.5rem;
     }
     
+    /* Content wrapper mobile */
+    .content-wrapper {
+        padding: 1rem;
+        margin: 0 0.5rem;
+    }
+    
+    /* Hero title mobile */
     .hero-title {
-        font-size: 2rem;
+        font-size: 2.2rem;
+        line-height: 1.1;
+    }
+    
+    /* Hero subtitle mobile */
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    /* Hero description mobile */
+    .hero-description {
+        font-size: 1rem;
+        padding: 0 1rem;
     }
     
     .project-card {
         height: 380px;
-    }
-    
-    .card-front, .card-back {
-        padding: 1.5rem;
     }
     
     .skills-container {
@@ -776,6 +832,40 @@ svg.parallax {
     .btn {
         padding: 0.6rem 1rem;
         font-size: 0.8rem;
+    }
+    
+    /* Contact items mobile */
+    .contact-item {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    /* Contact icon mobile */
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        margin-right: 1rem;
+    }
+    
+    /* Form inputs mobile */
+    .form-group input,
+    .form-group textarea {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Landscape mobile fix */
+@media (max-width: 768px) and (orientation: landscape) {
+    #contact {
+        position: relative !important;
+        min-height: auto !important;
+    }
+    
+    .hero-stats {
+        flex-direction: row;
+        gap: 1.5rem;
     }
 }
 
